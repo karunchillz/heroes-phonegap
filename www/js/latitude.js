@@ -18,7 +18,7 @@
     //
     function onSuccess(position) {
     	alert("Hello");
-    	$.post("http://10.134.124.142:3000/",{"latitude":position.coords.latitude,"longitude":position.coords.longtitude},function(){alert("suceess:"+position.coords.longtitude);});
+    	$.post(serverURL,{"latitude":position.coords.latitude,"longitude":position.coords.longtitude},function(){alert("suceess:"+position.coords.longtitude);});
     var element = document.getElementById('geolocation');
         element.innerHTML = 'Latitude: '           + position.coords.latitude              + '<br />' +
                             'Longitude: '          + position.coords.longitude             + '<br />' +

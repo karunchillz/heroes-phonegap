@@ -6,6 +6,11 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" href="css/jquery.mobile-1.4.4.min.css">
         <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <script src="js/mapView.js"></script>
+        <script src="js/PushNotificationReg.js"></script>
+        <script src="js/jquery-1.11.1.js"></script>
+        <script src="js/common.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=visualization"></script>
         <title>HEROES</title>
     </head>
     <body>
@@ -118,7 +123,7 @@
             <div data-role="content" class="ui-content">
                 <div class="ui-grid-solo">
                     <div class="ui-block-a">
-                        HEROES NOTIFICATION
+                        <div id="googleMap" style="width:500px;height:380px;"></div>
                     </div>
                 </div>
             </div>
@@ -131,6 +136,6 @@
         <script type="text/javascript" src="js/jquery.mobile-1.4.4.min.js"></script>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>   
-        <script type="text/javascript" src="js/latitude.js"></script>        
+        <script type="text/javascript" src="js/latitude.js"></script>
     </body>
 </html>
