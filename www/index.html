@@ -27,9 +27,12 @@
             <div data-role="content" class="ui-content">
                 <div class="ui-grid-solo alertWrapper">
                     <div class="ui-block-a circle">
-                        <button class="ui-btn" align="center">
+                        <button class="ui-btn" align="center" onclick="geolocation();">
                             <img src="img/SoS.png">
                         </button>
+                    </div>
+                    <div id="geolocation">
+                        Hello
                     </div>
                     <div class="ui-block-a">
                         <div class="alertHelp">
@@ -127,6 +130,7 @@
         <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
         <script type="text/javascript" src="js/jquery.mobile-1.4.4.min.js"></script>
         <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>        
+        <script type="text/javascript" src="js/index.js"></script>   
+        <script type="text/javascript" src="js/latitude.js"></script>        
     </body>
 </html>
