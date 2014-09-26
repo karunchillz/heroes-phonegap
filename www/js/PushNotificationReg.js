@@ -20,6 +20,19 @@ function errorHandler (error) {
 function onNotification(e) {
     switch( e.event )
     {
+        case 'registered':
+               if ( e.regid.length > 0 )
+               {
+                   var user = localStorage.getItem('username');
+                   var GCMREGURL = "http://10.134.124.142:3000/gcmregistration?regid="+e.regid+"&user="+user; 
+                   // Register the gcm Reggie
+                   $.get(GCMREGURL,function(data){
+                       alert("GCM Registration successful !!");
+                   });                                
+               
+                   alert('registration id = '+e.regid);
+               }
+           break;
         case 'message':
             /*if ( e.foreground ){
                 var soundfile = e.soundname || e.payload.sound;
