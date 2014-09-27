@@ -15,6 +15,27 @@
     </head>
     <body>
 
+        <!-- HOME PAGE  -->
+        <div data-role="page" class="ui-page" data-theme="b">
+            <div data-role="header" data-position="fixed" class="ui-header" data-theme="a">
+                <h1> HEROES</h1>
+            </div>
+            <div data-role="content" class="ui-content">
+                <div class="ui-grid-solo alertWrapper">
+                    <div class="ui-block-a">
+                        <img src="img/SoS.png">
+                    </div>
+                    <div class="ui-block-a">
+                        <button id="createAccount">Create</button>
+                    </div>
+                </div>
+            </div>
+            <div data-role="footer" data-position="fixed" class="ui-footer" data-theme="a">
+                @Copyright 2014 : HEROES
+            </div>
+        </div>
+
+
         <!-- ALERT PAGE  -->
         <div data-role="page" id="alertPage" class="ui-page" data-theme="b">
             <div data-role="panel" id="menuPanel">
@@ -32,12 +53,9 @@
             <div data-role="content" class="ui-content">
                 <div class="ui-grid-solo alertWrapper">
                     <div class="ui-block-a circle">
-                        <button class="ui-btn" align="center" onclick="geolocation();">
-                            <img src="img/SoS.png">
-                        </button>
-                    </div>
-                    <div id="geolocation">
-                        Hello
+                        <div class="ui-btn circle" id="sosAlertButton">
+                            SOS
+                        </div>
                     </div>
                     <div class="ui-block-a">
                         <div class="alertHelp">
@@ -140,7 +158,8 @@
         <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
         <script type="text/javascript" src="js/jquery.mobile-1.4.4.min.js"></script>
         <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>   
-        <script type="text/javascript" src="js/latitude.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/PushNotification.js"></script>
+        <script type="text/javascript" src="js/device.js"></script>   
     </body>
 </html>

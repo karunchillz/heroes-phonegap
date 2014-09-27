@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" href="css/jquery.mobile-1.4.4.min.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <script src="js/mapView.js"></script>
+        <script src="js/PushNotificationReg.js"></script>
+        <script src="js/jquery-1.11.1.js"></script>
+        <script src="js/common.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=visualization"></script>
+        <title>HEROES</title>
+    </head>
+    <body>
+
+        <!-- HOME PAGE  -->
+        <div data-role="page" class="ui-page" data-theme="b">
+            <div data-role="header" data-position="fixed" class="ui-header" data-theme="a">
+                <h1> HEROES</h1>
+            </div>
+            <div data-role="content" class="ui-content">
+                <div class="ui-grid-solo alertWrapper">
+                    <div class="ui-block-a">
+                        <img src="img/SoS.png">
+                    </div>
+                    <div class="ui-block-a">
+                        <button id="createAccount">Create</button>
+                    </div>
+                </div>
+            </div>
+            <div data-role="footer" data-position="fixed" class="ui-footer" data-theme="a">
+                @Copyright 2014 : HEROES
+            </div>
+        </div>
+
+
+        <!-- ALERT PAGE  -->
+        <div data-role="page" id="alertPage" class="ui-page" data-theme="b">
+            <div data-role="panel" id="menuPanel">
+                <ul data-role="listview">
+                    <li><a href="#settingsPage">Settings</a></li>
+                    <li><a href="#howItWorksPage">How It Works</a></li>
+                    <li><a href="#profilePage">User Profile</a></li>
+                    <li><a href="#loginPage">Logout</a></li>
+                </ul>
+            </div>
+            <div data-role="header" data-position="fixed" class="ui-header" data-theme="a">
+                <a href="#menuPanel" class="ui-btn">MENU</a>
+                <h1> ALERT PAGE</h1>
+            </div>
+            <div data-role="content" class="ui-content">
+                <div class="ui-grid-solo alertWrapper">
+                    <div class="ui-block-a circle">
+                        <div class="ui-btn circle" id="sosAlertButton">
+                            SOS
+                        </div>
+                    </div>
+                    <div class="ui-block-a">
+                        <div class="alertHelp">
+                            Please Click Me Only when needed !!
+                            A police complaint would be registered !!
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-role="footer" data-position="fixed" class="ui-footer" data-theme="a">
+                @Copyright 2014 : HEROES
+            </div>
+        </div>
+
+        <!-- LIVE MAP PAGE  -->
+        <div data-role="page" id="liveMapPage" class="ui-page" data-theme="b">
+            <div data-role="panel" id="menuPanel">
+                <ul data-role="listview">
+                    <li><a href="#settingsPage">Settings</a></li>
+                    <li><a href="#howItWorksPage">How It Works</a></li>
+                    <li><a href="#profilePage">User Profile</a></li>
+                    <li><a href="#loginPage">Logout</a></li>
+                </ul>
+            </div>
+            <div data-role="header" data-position="fixed" class="ui-header">
+                <a href="#menuPanel" class="ui-btn">MENU</a>
+                <h1> HEROES - Home</h1>
+            </div>
+            <div data-role="content" class="ui-content">
+                <div class="ui-grid-solo">
+                    <div class="ui-block-a">
+                        LIVE MAP
+                    </div>
+                </div>
+            </div>
+            <div data-role="footer" data-position="fixed" class="ui-footer">
+                @Copyright 2014 : HEROES
+            </div>
+        </div>
+
+         <!-- VICTIM NOTIFICATION PAGE  -->
+        <div data-role="page" id="victimNotificationPage" class="ui-page" data-theme="b">
+            <div data-role="panel" id="menuPanel">
+                <ul data-role="listview">
+                    <li><a href="#settingsPage">Settings</a></li>
+                    <li><a href="#howItWorksPage">How It Works</a></li>
+                    <li><a href="#profilePage">User Profile</a></li>
+                    <li><a href="#loginPage">Logout</a></li>
+                </ul>
+            </div>
+            <div data-role="header" data-position="fixed" class="ui-header">
+                <a href="#menuPanel" class="ui-btn">MENU</a>
+                <a href="#emergencyPopup" id="emergencyClick" class="no-display"></a>
+                <h1> Victim Notification</h1>
+            </div>
+            <div data-role="content" class="ui-content">
+                <div class="ui-grid-solo">
+                    <div class="ui-block-a">
+                        Help is on the way. Police have been notified
+                    </div>
+                    <div class="ui-block-a" id="hero_en_route">
+                    </div>
+                </div>
+            </div>
+            <div data-role="footer" data-position="fixed" class="ui-footer">
+                @Copyright 2014 : HEROES
+            </div>
+        </div>
+        
+         <!-- HEROES NOTIFICATION PAGE  -->
+        <div data-role="page" id="heroesNotificationPage" class="ui-page" data-theme="b">
+            <div data-role="panel" id="menuPanel">
+                <ul data-role="listview">
+                    <li><a href="#settingsPage">Settings</a></li>
+                    <li><a href="#howItWorksPage">How It Works</a></li>
+                    <li><a href="#profilePage">User Profile</a></li>
+                    <li><a href="#loginPage">Logout</a></li>
+                </ul>
+            </div>
+            <div data-role="header" data-position="fixed" class="ui-header">
+                <a href="#menuPanel" class="ui-btn">MENU</a>
+                <a href="#emergencyPopup" id="emergencyClick" class="no-display"></a>
+                <h1> Heroes Notification</h1>
+            </div>
+            <div data-role="content" class="ui-content">
+                <div class="ui-grid-solo">
+                    <div class="ui-block-a">
+                        Would you like to help to someone who needs it?
+                    </div>
+                    <div class="ui-block-a">
+                        <button onclick=acceptNotification();>Accept</button><button>Reject</button>
+                    </div>
+                </div>
+            </div>
+            <div data-role="footer" data-position="fixed" class="ui-footer">
+                @Copyright 2014 : HEROES
+            </div>
+        </div>
+
+        <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.4.4.min.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/PushNotification.js"></script>
+        <script type="text/javascript" src="js/device.js"></script>   
+    </body>
+</html>
