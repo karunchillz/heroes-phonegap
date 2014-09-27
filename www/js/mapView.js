@@ -42,13 +42,15 @@ function acceptNotification(){
             fillOpacity:0.4
         });
         addPath.setMap(map);
+        
         startTracking();
     }
 function startTracking(){
-    $.get(serverURL,{"trackId":trackID},function(data){
+    $.get(serverURL+"/updateposition?latitude="+position.coords.latitude+"&longitude="+position.coords.longtitude+"&user="+localStorage.getItem("username")+"&trackId="trackID});
+    $.get(serverURL+"/getallpositions?trackId="+trackID,function(data){
         trackOtherHeroes(data);
     };);
-    setTimeout(startTracking, 3000 );
+    setTimeout(startTracking, 60000 );
 }
 function trackOtherHeroes(data){
     data=$.parseJSON(data);
@@ -59,7 +61,6 @@ function trackOtherHeroes(data){
         heplersName=hep.user;
         helpLat=hep.position.lat;
         helpLng=hep.position.long;
-
         var heroPathLatLng=new google.maps.LatLng(helpLat,helpLng);
         var routePath=[heroPathLatLng,vicLatLng];
         var addPath=new google.maps.Polygon({
