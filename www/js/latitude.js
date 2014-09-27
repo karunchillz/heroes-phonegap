@@ -5,7 +5,7 @@
     function geolocation() {
     	if(navigator.geolocation) {
     // Geolocation supported. Do something here.
-        navigator.geolocation.getgetCurrentPosition(onSuccess, onError);
+        navigator.geolocation.getCurrentPosition(onSuccess, onError);
         alert("Called");
     	}
     	else
